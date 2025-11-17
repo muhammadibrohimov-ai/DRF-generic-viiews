@@ -22,7 +22,7 @@ class AuthorSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Author
-        fields = ['id', 'fullname', 'country', 'created_at', 'books']
+        fields = ['id', 'fullname', 'country', 'created_at', 'books', 'year']
         read_only_fields = ['id', 'created_at', 'books']
         
         
