@@ -47,4 +47,12 @@ class ListBooksView(ListAPIView):
     filter_fields = ['name', 'author__name', 'author__country',]
     search_fields = ['name', 'author__fullname', 'author__country', 'desc']
     
-# class
+    
+class CreateBookView(CreateAPIView):
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
+    
+
+class UpdateBookView(RetrieveUpdateDestroyAPIView):
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
